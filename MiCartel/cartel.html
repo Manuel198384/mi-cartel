@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mi cartel</title>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@600;700&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+:root {
+  --ink: #1f2c4c;
+  --pine: #2f6f62;
+  --paper: #efeadd;
+  --chalk: #faf9f4;
+}
+   body {
+  font-family: 'IBM Plex Sans', Arial, sans-serif;
+  background-color: var(--paper);
+}
+
+h1, h2, h3 {
+  font-family: 'Spectral', serif;
+}
+
+    div {
+  background-color: var(--chalk);
+  border: 1px solid #ccc;
+  border-top: 4px solid var(--pine);
+  padding: 20px;
+  margin: 15px;
+}
+    
+    .fila {
+      display: flex;
+      gap: 15px;
+    }
+    .columna {
+      flex: 1;
+    }
+    sup {
+      font-size: 0.7em;
+      vertical-align: super;
+      line-height: 0;
+    }
+.portada {
+  background-color: var(--ink);
+  color: var(--chalk);
+  border-top: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+.portada h1 {
+  color: var(--chalk);
+}
+
+.portada strong {
+  color: #bcd2c9;
+}
+
+.portada-texto {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contenedor {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+  </style>
+
+</head>
+<body>
+
+ <div class="contenedor">
+  
+  <div class="portada">
+  <div class="portada-texto">
+    <h1>Métodos de Integración</h1>
+    <p><strong>Elaborado por:</strong> Luis Manuel Hernández Hernández</p>
+    <p><strong>F.A Prof:</strong> Juan Carlos Hernández Patrana</p>
+    <p><strong>Materia:</strong> Cálculo Integral</p>
+    <p><strong>Fecha:</strong> 17/08/2026</p>
+  </div>
+
+  <img src="logo.jpg" alt="Escudo de la UnADM" width="150">
+</div>
+
+  <div>
+  <h2>Introducción</h2>
+  <p>¿Para qué sirven los métodos de integración? A lo largo de este cartel respondo esa pregunta con base en lo que investigué sobre tres técnicas del cálculo integral. Cuando resuelvo una integral, no todas las funciones se dejan integrar con las fórmulas básicas de las tablas; muchas requieren transformarse antes en una forma que sí reconozco. Para eso existen los métodos de integración: son estrategias que permiten reescribir una integral complicada como una combinación de integrales más simples, sin alterar el valor de la expresión original. Estas técnicas se usan constantemente en física, ingeniería, economía y estadística, siempre que se necesita calcular áreas, volúmenes, trabajo, probabilidades acumuladas o cualquier cantidad que se obtenga "sumando" un proceso continuo. En este trabajo desarrollo tres de los métodos más utilizados: integración por partes, integración por fracciones parciales e integración por sustitución trigonométrica, explicando en qué consiste cada uno y cuándo conviene aplicarlo.</p>
+  </div>
+
+  <div class="fila">
+
+    <div class="columna">
+      <h3>Integración por partes</h3>
+      <p>∫u dv = uv − ∫v du</p>
+
+      <p><strong>¿Cuándo se usa?</strong><br>
+      Lo aplico cuando la función que quiero integrar es un producto de dos funciones de naturaleza distinta (por ejemplo, un polinomio junto con una exponencial, un logaritmo o una función trigonométrica) y ninguna sustitución simple funciona.</p>
+
+      <p><strong>¿En qué consiste?</strong><br>
+      Consiste en identificar dentro del integrando dos partes, u y dv, de modo que al derivar u y al integrar dv se obtenga una nueva integral ∫v du más sencilla que la original. Es, en esencia, la versión "en reversa" de la regla del producto para derivadas.</p>
+
+      <p><strong>Ejemplo:</strong><br>
+      ∫x<sup>2</sup> e<sup>3x</sup> dx</p>
+    </div>
+
+    <div class="columna">
+      <h3>Fracciones parciales</h3>
+      <p><strong>¿Cuándo se usa?</strong><br>
+      Cuando se integra una función racional, es decir, un cociente de dos polinomios P(x)/Q(x), donde el grado del numerador es menor que el del denominador.</p>
+
+      <p><strong>¿En qué consiste?</strong><br>
+      En factorizar el denominador y reescribir la fracción original como una suma de fracciones más simples, fáciles de integrar por separado.</p>
+
+      <p><strong>Casos del método:</strong></p>
+      <ul>
+        <li>Factores lineales distintos</li>
+        <li>Factores lineales repetidos</li>
+        <li>Factores cuadráticos irreducibles distintos</li>
+        <li>Factores cuadráticos irreducibles repetidos</li>
+      </ul>
+
+      <p><strong>Ejemplo:</strong><br>
+      ∫(3x + 5) / ((x − 1)(x + 2)) dx</p>
+    </div>
+
+    <div class="columna">
+      <h3>Sustitución trigonométrica</h3>
+      <p><strong>¿Cuándo se usa?</strong><br>
+      Cuando el integrando contiene una raíz como √(a² − x²), √(a² + x²) o √(x² − a²).</p>
+
+      <p><strong>¿En qué consiste?</strong><br>
+      En reemplazar la variable x por una función trigonométrica de un ángulo θ, apoyándose en un triángulo de referencia, para simplificar la raíz.</p>
+
+      <p><strong>Casos del método:</strong></p>
+      <ul>
+        <li>√(a² − x²) → se usa x = a·sen θ</li>
+        <li>√(a² + x²) → se usa x = a·tan θ</li>
+        <li>√(x² − a²) → se usa x = a·sec θ</li>
+      </ul>
+
+      <p><strong>Ejemplo:</strong><br>
+      ∫dx / √(9 − x<sup>2</sup>) dx</p>
+    </div>
+
+  </div>
+
+  <div>
+    <h2>Conclusión</h2>
+    <p>Después de investigar estos tres métodos, entiendo que ninguno sustituye a los demás: cada uno responde a una "forma" distinta que puede tomar el integrando. Reconocer esa forma de un producto de funciones distintas, una fracción racional o una raíz con estructura pitagórica, es lo que me permite elegir la herramienta correcta antes de empezar a resolver. En ese sentido, dominar los métodos de integración no es memorizar fórmulas sueltas, sino desarrollar el criterio para identificar qué técnica conviene en cada caso, algo indispensable para aplicar el cálculo integral a problemas reales de física, ingeniería y ciencias en general..</p>
+  </div>
+<div>
+<h2>Referencias</h2>
+<ul>
+    <li>Stewart, J. (2018). Cálculo de una variable: Trascendentes tempranas (8.ª ed.). Cengage Learning.</li>
+    <li>Larson, R. y Edwards, B. (2016). Cálculo 1: de una variable (10.ª ed.). Cengage Learning.</li>
+      </ul>
+</div>
+<div>
+<h2>Herramientas para procesarlo en HTML</h2>
+<ul>
+    
+    <li>World Wide Web Consortium (W3C). (2024). HTML Living Standard. https://html.spec.whatwg.org/</li>
+    <li>Mozilla Developer Network. (2024). HTML: HyperText Markup Language. MDN Web Docs. https://developer.mozilla.org/es/docs/Web/HTML</li>
+  </ul>
+</div>
+
+</div>
+
+</body>
+</html>
